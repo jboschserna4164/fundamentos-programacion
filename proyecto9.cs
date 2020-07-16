@@ -7,25 +7,28 @@ namespace proyecto9
         static void Main(string[] args)
         {
             //desafio 01 : calculo de tarifa
-            Console.WriteLine("Ingrese la cantidad de salarios minimos que gana");            
-            int salario = int.Parse(Console.ReadLine());
+            Console.WriteLine("Ingrese su salario");            
+            double salario = double.Parse(Console.ReadLine());
 
-            if(salario >= 0 &&  salario < 2)
+            double salariomin = salario / 877803;
+            Console.WriteLine(salariomin + " SMMLV");
+
+            if(salariomin >= 0 &&  salariomin < 2)
             {
                 Console.WriteLine("Es tarifa A");
             }
 
-            if (salario >= 2 && salario < 4)
+            if (salariomin >= 2 && salariomin < 4)
             {
                 Console.WriteLine("Es tarifa B");
             }
 
 
-            if (salario >= 4){
+            if (salariomin >= 4){
                 Console.WriteLine("Es tarifa C");
             }
 
-            else if (salario < 0)
+            else if (salariomin < 0)
             {
                 Console.WriteLine("salario minimo no permitido");
             }
